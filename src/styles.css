@@ -1,0 +1,193 @@
+:root {
+    --bg-clr: #2D415C;
+    --main-font: 'Ubuntu', sans-serif;
+    --btn-clr: #066D89;
+    --shadow-clr: rgba(4,216,249, 1)
+}
+
+body {
+    background-color: var(--bg-clr);
+    color: white;
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    top: 0 !important;
+}
+
+.App {
+    /* width: 100vw; */
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-shadow: 3px 0px 20px var(--shadow-clr);
+
+}
+
+form {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text > label {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.input-text > input {
+    width: 220px;
+    height: 30px;
+    outline: none;
+    transition: 0.3s all;
+    border: transparent;
+}
+
+.input-text > input:focus {
+    box-shadow: 3px 0px 20px var(--shadow-clr);;
+}
+
+.login-button {
+    width: 70px;
+    height: 30px;
+    background-color: var(--btn-clr);
+    color: white;
+    border: transparent;
+    transition: 0.3s all;
+    margin: 1rem;
+}
+
+.login-button:hover {
+    filter: brightness(1.3);
+    cursor: pointer;
+}
+
+.login-button:disabled {
+    background-color: gray;
+    color: rgba(255, 255, 255, 0.444);
+    pointer-events: none;
+}
+
+.input-error-message {
+    height: 16px;
+    max-width: 220px;
+    width: 220px;
+    padding: 0.5rem 0;
+    font-size: 0.7rem;
+    color: red;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    width: 600px;
+    height: 90vh;
+    margin-top: 5rem;
+}
+
+.movie-item-container {
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-poster > img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.goog-te-gadget {
+    position:absolute;
+    top: 0;
+    margin-top: 20px;
+}
+
+.movie-title {
+    background-color: white;
+    /* width: 100%; */
+    width: 200px;
+    font-size: 0.7rem;
+}
+
+.movie-item {
+    margin-bottom: 2rem;
+    background-color: white;
+    color: var(--bg-clr);
+    
+    text-align: center;
+}
+
+
+nav {
+    position: absolute;
+    display: flex;
+    width: 600px;
+    top: 0;
+    align-items: center;
+}
+
+nav > h2 {
+    margin-right: auto;
+    font-weight: 300;
+}
+
+.nav-email {
+    margin-right: 1rem;
+    font-size: 0.7rem;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none;
+}
+
+@media only screen and (max-width: 550px){
+    .movies-container {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+
+    nav {
+        left: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    nav > h2 {
+        margin-right: 3rem;
+    }
+
+    .nav-email {
+        display: none;
+    }
+
+    .goog-te-gadget {
+        margin-top: 50px;
+    }
+}
